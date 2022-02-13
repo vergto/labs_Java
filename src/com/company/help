@@ -1,3 +1,5 @@
+На память
 git add .
 git commit -m "Залил подсказку"
 git push -u origin main
+
