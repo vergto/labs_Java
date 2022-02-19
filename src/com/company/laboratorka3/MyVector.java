@@ -102,6 +102,26 @@ public class MyVector {
         return corne;
     }
 
+    public boolean get_collin(int x, int y){
+        boolean collin;
+        if (vector_date_mas[0][y] != 0 && vector_date_mas[1][y] != 0)
+            if ((vector_date_mas[0][x]/vector_date_mas[0][y]) == (vector_date_mas[1][x]/vector_date_mas[1][y])) {
+                collin = true;
+            } else
+                collin = false;
+        else
+            collin = false;
+        return collin;
+    }
+    public boolean get_ortogonal(int x, int y){
+        boolean ortogonal;
+        if (get_scalar(x,y) == 0)
+            ortogonal = true;
+        else
+            ortogonal = false;
+        return ortogonal;
+    }
+
 
 
 }

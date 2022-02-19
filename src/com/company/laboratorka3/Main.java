@@ -30,8 +30,18 @@ public class Main {
         System.out.println(vector.get_length(1));
         //Угол векторов
         System.out.println(vector.get_corner(0, 1));
-
         //  Лабораторная работа 3 - Вариант 1 - Задание 2
-       // System.out.println(vector.get_sum());
+        // Колиниарность векторов
+        System.out.println(vector.get_collin(0, 1)? "Коллинеарны" : "Не коллинеарны");
+        // Ортоганальность векторов
+        System.out.println(vector.get_ortogonal(1, 2)? "Ортогональны" : "Не ортогональны");
+
+        //  Лабораторная работа 3 - Вариант 2 - Задание 1
+        Student[] students = new Student[n];
+        for (int i = 0; i < n; i++) {
+            students[i] = new Student(i);
+        }
+        System.out.println(Arrays.toString(students));
+        //
     }
 }
