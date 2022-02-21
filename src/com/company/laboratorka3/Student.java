@@ -3,7 +3,6 @@ package com.company.laboratorka3;
 import com.company.Library;
 
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class Student {
     private int id;
@@ -16,6 +15,8 @@ public class Student {
     private String faculty;
     private int course;
     private int group;
+    private long card;
+    private long bank_;
 
     public Student(int x){
         this.id = x;
@@ -26,8 +27,14 @@ public class Student {
         this.address = "Address" + (int) (Math.random()*9);
         this.phone = Library.getRandomPhone();
         this.faculty = Library.faculty[(int) (Math.random()*4)];
-        this.course = (int) (Math.random()*6);
+        this.course = 1 + (int) (Math.random()*6);
         this.group = (int) (Math.random()*4);
+        this.card = Long.parseLong(Library.getRandomCard());
+        this.bank_ = Long.parseLong(Library.getRandomCard());
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     @Override
@@ -37,13 +44,39 @@ public class Student {
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", patronymic_name='" + patronymic_name + '\'' +
-                ", date=" + date +
+                ", date='" + date + '\'' +
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
                 ", faculty='" + faculty + '\'' +
                 ", course=" + course +
                 ", group=" + group +
+                ", card=" + card +
+                ", bank_=" + bank_ +
                 '}';
+    }
+
+    public void setCard(long card) {
+        this.card = card;
+    }
+
+    public void setBank_(long bank_) {
+        this.bank_ = bank_;
+    }
+
+    public long getCard() {
+        return card;
+    }
+
+    public void setCard(int card) {
+        this.card = card;
+    }
+
+    public long getBank_() {
+        return bank_;
+    }
+
+    public void setBank_(int bank_) {
+        this.bank_ = bank_;
     }
 
     public int getId() {
