@@ -2,6 +2,7 @@ package com.company.laboratorka3;
 
 import com.company.Library;
 
+import javax.crypto.Cipher;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -173,6 +174,20 @@ public class Main {
         System.out.println(oneArray.sum(0, 1));
         System.out.println(oneArray.sub(0, 1));
         System.out.println(oneArray.mult(0, 1));
+        // 4 Вариант - Задание 1
+
+        Course course = new Course();
+        System.out.println("список того что получилось: ");
+        for (int i = 0; i < n; i++) {
+            course.Course_set(i);
+        }
+        //список того что получилось.
+        System.out.println("список того что получилось: ");
+
+        for (int i = 0; i < n; i++) {
+                System.out.println(course.toString(i));
+        }
+
 
 
 
@@ -189,4 +204,6 @@ public class Main {
 
 
     }
+
+
 }
