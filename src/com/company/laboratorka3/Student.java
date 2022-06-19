@@ -4,7 +4,7 @@ import com.company.Library;
 
 import java.util.Date;
 
-public class Student {
+public abstract class Student {
     private int id;
     private String first_name;
     private String last_name;
@@ -36,6 +36,8 @@ public class Student {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public abstract String getName();
 
     @Override
     public String toString() {

@@ -43,7 +43,12 @@ public class Main {
         //  Лабораторная работа 3 - Вариант 2 - Задание 1
         Student[] students = new Student[n];
         for (int i = 0; i < n; i++) {
-            students[i] = new Student(i);
+            students[i] = new Student(i) {
+                @Override
+                public String getName() {
+                    return null;
+                }
+            };
         }
         System.out.println(Arrays.toString(students));
         //список студентов заданного факультета;
